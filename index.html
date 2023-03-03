@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Guess my number</title>
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+    <button class="btn again">Again!</button>
+    <p>(Between 1 and 20)</p>
+</header>
+<h1>Guess My Number!</h1>
+<div class="number-wrapper">
+    <div class="number">?</div>
+    <div class="line"></div>
+</div>
+<div class="check-wrapper">
+    <div class="check-block">
+        <input type="number" class="guess">
+        <button class="btn check">Check!</button>
+    </div>
+    <div class="text-block">
+        <div class="message">Start guessing...</div>
+        <div class="score-block">
+            💯 Score: <span class="score"></span>
+        </div>
+        <div class="high-score-block">
+            🥇 High score: <span class="high-score">0</span>
+        </div>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
