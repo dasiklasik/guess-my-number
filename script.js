@@ -5,8 +5,12 @@ const calculateRandomNumber = () => {
 const checkNumber = () => {
     if(!checkInput.value) {
         message.textContent = '⛔️ No number'
-    } else if (checkInput.value === randomNumber) {
+    } else if (+checkInput.value === randomNumber) {
         message.textContent = '🎉️ Correct number'
+        if (score > highScore) {
+            highScore = score
+            highScoreField.textContent = highScore
+        }
     } else if (checkInput.value !== randomNumber) {
         if (score >= 1) {
             message.textContent = checkInput.value > randomNumber ? 'Too high!' : 'Too low!'
@@ -25,9 +29,11 @@ const checkBtn = document.querySelector('.btn.check')
 const message = document.querySelector('.message')
 const number = document.querySelector('.number')
 const scoreField = document.querySelector('.score')
+const highScoreField = document.querySelector('.high-score')
 
 let randomNumber = calculateRandomNumber()
-let score = 20;
+let score = 20
+let highScore = 0
 
 checkBtn.addEventListener('click', checkNumber)
 
