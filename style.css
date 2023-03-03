@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+html {
+    font-size: 16px;
+    line-height: 220%;
+}
+
+body {
+    background: #222;
+    color: #eee;
+}
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header p {
+    font-size: 0.8rem;
+}
+
+.btn {
+    background: #eee;
+    color: #222;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+}
+
+.number-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.number {
+    font-size: 4rem;
+    background: #eee;
+    color: #222;
+    display: inline-block;
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.line {
+    width: 120%;
+    height: 0.5rem;
+    background: #eee;
+    position: absolute;
+    left: -10%;
+    top: 50%;
+    z-index: 1;
+}
+
+.check-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.check-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guess {
+    width: 20rem;
+    height: 10rem;
+    background: transparent;
+    color: #eee;
+    border: 0.6rem solid #eee;
+    font-size: 3rem;
+    padding: 0.4rem;
+    text-align: center;
+}
+
+.btn.check {
+    margin-top: 1rem;
+}
+
+.text-block {
+    font-size: 1.5rem;
+}
+
+.score-block {
+    margin-top: 4rem;
+}
+
+@media screen and (max-width: 991px){
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    html {
+        font-size: 12px;
+    }
+
+    h1 {
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .check-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-block {
+        margin-top: 4rem;
+        text-align: center;
+    }
+}
