@@ -23,6 +23,7 @@ const checkNumber = () => {
             message.textContent = '😭 You lose'
             score = 0
             scoreField.textContent = score.toString()
+            checkBtn.disabled = true
         }
     }
 }
@@ -34,6 +35,7 @@ const resetGame = () => {
     scoreField.textContent = score
     checkInput.value = ''
     body.classList.remove('win')
+    checkBtn.disabled = false
 }
 
 const checkInput = document.querySelector('.guess')
