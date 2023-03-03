@@ -17,6 +17,10 @@ body {
     color: #eee;
 }
 
+body.win {
+    background: #60b347;
+}
+
 .wrapper {
     width: 95%;
     margin: 0 auto;
@@ -38,6 +42,7 @@ header p {
     color: #222;
     padding: 1rem 2rem;
     font-size: 1.5rem;
+    border: none;
 }
 
 h1 {
@@ -94,6 +99,11 @@ h1 {
     font-size: 3rem;
     padding: 0.4rem;
     text-align: center;
+    transition: all 0.7s;
+}
+
+.guess.error {
+    border-color: #ff4343;
 }
 
 .btn.check {
