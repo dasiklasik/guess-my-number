@@ -7,6 +7,7 @@ const checkNumber = () => {
         message.textContent = '⛔️ No number'
     } else if (+checkInput.value === randomNumber) {
         message.textContent = '🎉️ Correct number'
+        number.textContent = randomNumber.toString()
         if (score > highScore) {
             highScore = score
             highScoreField.textContent = highScore
@@ -24,12 +25,21 @@ const checkNumber = () => {
     }
 }
 
+const resetGame = () => {
+    number.textContent = "?"
+    message.textContent = 'Start guessing...'
+    score = 20
+    scoreField.textContent = score
+    checkInput.value = ''
+}
+
 const checkInput = document.querySelector('.guess')
 const checkBtn = document.querySelector('.btn.check')
 const message = document.querySelector('.message')
 const number = document.querySelector('.number')
 const scoreField = document.querySelector('.score')
 const highScoreField = document.querySelector('.high-score')
+const againBtn = document.querySelector('.btn.again')
 
 let randomNumber = calculateRandomNumber()
 let score = 20
@@ -37,4 +47,4 @@ let highScore = 0
 
 checkBtn.addEventListener('click', checkNumber)
 
-number.textContent = randomNumber.toString()
+againBtn.addEventListener('click', resetGame)
